@@ -18,6 +18,10 @@ parser.add_argument("-d", "--display",
 
 args = parser.parse_args()
 header = "#"*60
+
+def some_imaginary_feature():
+    pass
+
 def arg_check(args):
     """Go through and check the arguments in args. Raise an InputError if
     none of the necessary input is provided.
