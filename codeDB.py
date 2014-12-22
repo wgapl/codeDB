@@ -16,11 +16,10 @@ parser.add_argument("-r", "--remove", help="Remove a project from codeDB.")
 parser.add_argument("-d", "--display",
     help="Show the contents of codeDB.", action="store_true")
 
+head_width = 60
 args = parser.parse_args()
-header = "#"*60
+header = "#" * head_width
 
-def some_imaginary_feature():
-    pass
 
 def arg_check(args):
     """Go through and check the arguments in args. Raise an InputError if
@@ -64,8 +63,8 @@ def display_codeDB():
     import math
     code = get_code()
     codeDB_label = " codeDB Project List "
-    prefill = "#" * int(math.floor((60. - len(codeDB_label))/2))
-    postfill =  "#" * int(math.ceil((60. - len(codeDB_label))/2))
+    prefill = "#" * int(math.floor((head_width + 0. - len(codeDB_label))/2))
+    postfill =  "#" * int(math.ceil((head_width +0. - len(codeDB_label))/2))
     print
     print header
     print ''.join([prefill,codeDB_label,postfill])
